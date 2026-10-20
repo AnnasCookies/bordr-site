@@ -1,0 +1,26 @@
+{
+	"name": "bordr-site",
+	"description": "Static landing site for bordr.dev (Cloudflare Pages).",
+	"private": true,
+	"version": "1.1.1",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/AnnasCookies/bordr-site.git"
+	},
+	"homepage": "https://bordr.dev",
+	"engines": {
+		"bun": ">=1.2"
+	},
+	"type": "module",
+	"scripts": {
+		"dev": "bun --hot scripts/serve.ts",
+		"lint": "prettier --check .",
+		"format": "prettier --write .",
+		"test": "bun test"
+	},
+	"devDependencies": {
+		"@types/bun": "^1.2.0",
+		"prettier": "^3.8.3"
+	}
+}

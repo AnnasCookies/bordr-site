@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		<title>bordr for Herdr — Read and drive coding agents from your phone</title>
+		<meta
+			name="description"
+			content="bordr is a self-hosted mobile workspace for reading and driving Herdr coding agents from your phone over Tailscale."
+		/>
+		<meta name="theme-color" content="#f4f5f7" />
+		<link rel="icon" href="/favicon.ico" sizes="32x32" />
+		<link rel="icon" href="/collie.svg" type="image/svg+xml" />
+		<link rel="apple-touch-icon" href="/patrl-192.png" />
+
+		<!-- Open Graph / Social -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://bordr.dev/" />
+		<meta
+			property="og:title"
+			content="bordr for Herdr — Read and drive coding agents from your phone"
+		/>
+		<meta
+			property="og:description"
+			content="A self-hosted mobile web workspace for Herdr coding agents over Tailscale. Blocked agents rise to the top with tappable options."
+		/>
+		<meta property="og:image" content="https://bordr.dev/media/banner.jpg" />
+		<meta name="twitter:card" content="summary_large_image" />
+
+		<link rel="stylesheet" href="/styles.css" />
+		<script src="/site.js" defer></script>
+	</head>
+	<body>
+		<header class="topbar">
+			<div class="shell topbar-inner">
+				<a class="brand" href="/">
+					<img src="/collie.svg" alt="bordr pixel-art border collie mark" width="28" height="28" />
+					<span>bordr</span>
+					<span class="version-pill">v1.1.1</span>
+				</a>
+				<nav class="nav-actions" aria-label="Primary">
+					<button
+						type="button"
+						id="theme-toggle"
+						class="btn"
+						aria-label="Toggle light and dark theme"
+					>
+						<span id="theme-label">Dark</span>
+					</button>
+					<a class="btn hide-mobile" href="https://github.com/AnnasCookies/bordr">View source</a>
+					<a class="btn btn-primary" href="https://github.com/AnnasCookies/bordr#quickstart"
+						><span>Install<span class="hide-mobile"> from GitHub</span></span></a
+					>
+				</nav>
+			</div>
+		</header>
+
+		<main class="shell">
+			<section class="hero">
+				<div>
+					<div class="eyebrow">
+						<span class="eyebrow-dot" aria-hidden="true"></span>
+						<span>bordr for Herdr · Self-hosted PWA over Tailscale</span>
+					</div>
+					<h1>Read and drive every coding agent on your machine, from your phone.</h1>
+					<p class="hero-lead">
+						<strong>bordr</strong> is a self-hosted mobile web workspace for
+						<a href="https://herdr.dev">Herdr</a>, served privately over Tailscale. Your faithful,
+						playful, roaming sheepdog — herd your flock from anywhere.
+					</p>
+					<p class="hero-sub">
+						Blocked agents pin to the top of the list with their choices inline. Tap an option, read
+						the real session transcript as clean chat, or flip to Terminal mode for the exact pane
+						and split layout.
+					</p>
+					<div class="cta-row">
+						<a class="btn btn-primary" href="https://github.com/AnnasCookies/bordr#quickstart"
+							>Install from GitHub</a
+						>
+						<a class="btn" href="https://github.com/AnnasCookies/bordr">View source</a>
+						<a
+							class="btn btn-amber"
+							href="https://github.com/AnnasCookies/bordr/releases/tag/v1.1.1"
+							>Release v1.1.1</a
+						>
+					</div>
+					<div class="harness-row" aria-label="Supported coding agent harnesses">
+						<span>Works with:</span>
+						<span class="chip">Claude Code</span>
+						<span class="chip">codex</span>
+						<span class="chip">pi</span>
+						<span class="chip">omp</span>
+						<span class="chip">agy</span>
+						<span class="chip">grok</span>
+						<span class="chip">copilot</span>
+					</div>
+				</div>
+
+				<div class="phone-stage">
+					<div class="phone-frame">
+						<video
+							src="/media/demo.mp4"
+							poster="/media/agents-light.png"
+							width="604"
+							height="1200"
+							autoplay
+							loop
+							muted
+							playsinline
+							controls
+						>
+							<a href="/media/demo.mp4">Watch the bordr demonstration video (MP4)</a>
+						</video>
+					</div>
+					<p class="phone-caption">
+						<em>A blocked agent, answered from the list. No typing, no terminal.</em>
+					</p>
+				</div>
+			</section>
+
+			<section class="section" aria-labelledby="benefits-heading">
+				<div class="section-header">
+					<h2 id="benefits-heading">Three reasons it beats a phone SSH client</h2>
+					<p>Built for one thumb, real harness transcripts, and multiple concurrent sessions.</p>
+				</div>
+
+				<div class="benefits-grid">
+					<article class="benefit-card rail-blocked">
+						<span class="benefit-badge">1 · Blocked first</span>
+						<h3>Answer without opening anything</h3>
+						<p>
+							The moment an agent blocks on a permission or question, bordr pins it to the top of
+							the list with tappable options inline — and sends a Web Push notification carrying
+							those exact choices.
+						</p>
+					</article>
+
+					<article class="benefit-card rail-working">
+						<span class="benefit-badge">2 · Chat + Terminal</span>
+						<h3>Read clean chat, or drive the real TUI</h3>
+						<p>
+							Sessions render as structured chat with VS Code syntax highlighting, folded tool
+							calls, and diffs. When a TUI needs raw keys, switch to Terminal mode for the exact
+							pane, split strip, and `/` skill autocomplete.
+						</p>
+					</article>
+
+					<article class="benefit-card rail-done">
+						<span class="benefit-badge">3 · Whole estate</span>
+						<h3>Every machine, workspace, and worktree</h3>
+						<p>
+							Follows Herdr's workspaces, nested git worktrees with PR check badges, tabs, and panes
+							across your host and SSH-connected machines, plus full-text session search and
+							sandboxed file previews.
+						</p>
+					</article>
+				</div>
+			</section>
+
+			<section class="section" aria-labelledby="security-heading">
+				<div class="security-card">
+					<div class="security-head">
+						<h2 id="security-heading">Before you install: the tailnet is the security boundary</h2>
+						<a class="btn" href="https://github.com/AnnasCookies/bordr/blob/main/SECURITY.md"
+							>Read SECURITY.md</a
+						>
+					</div>
+					<p class="security-lead">
+						<strong>bordr deliberately has no login.</strong> Anyone who can reach its port can run
+						commands on your machine, reach every SSH machine bordr connects to, and read configured
+						file roots.
+					</p>
+					<div class="security-rules">
+						<div class="security-rule">
+							<strong>Serve, never Funnel</strong>
+							Use <code>tailscale serve</code> to keep bordr inside your tailnet. Never use
+							<code>tailscale funnel</code>, which publishes loopback to the public internet.
+						</div>
+						<div class="security-rule">
+							<strong>Shared tailnet? Use Grants</strong>
+							Restrict who can reach the host and port with
+							<a href="https://tailscale.com/docs/features/access-control/grants"
+								>Tailscale grants</a
+							>, and set <code>BORDR_ALLOWED_USERS</code> so bordr verifies caller identity.
+						</div>
+						<div class="security-rule">
+							<strong>Loopback or Unix socket only</strong>
+							bordr binds to <code>127.0.0.1</code> or a mode-<code>0600</code> Unix socket and
+							refuses public interfaces unless explicitly overridden.
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section" aria-labelledby="shots-heading">
+				<div class="section-header">
+					<h2 id="shots-heading">What it looks like</h2>
+					<p>
+						Light and dark throughout — use the theme button in the top bar to switch all six
+						screens.
+					</p>
+				</div>
+
+				<div class="shots-grid">
+					<figure class="shot-card">
+						<img
+							class="shot-light"
+							src="/media/agents-light.png"
+							alt="The agents list in light mode, with a blocked agent pinned at the top and its options inline"
+							loading="lazy"
+						/>
+						<img
+							class="shot-dark"
+							src="/media/agents-dark.png"
+							alt="The agents list in dark mode, with a blocked agent pinned at the top and its options inline"
+							loading="lazy"
+						/>
+						<figcaption>
+							<strong>The list</strong>
+							<span>Blocked agents first, answerable in place.</span>
+						</figcaption>
+					</figure>
+
+					<figure class="shot-card">
+						<img
+							class="shot-light"
+							src="/media/conversation-light.png"
+							alt="A conversation rendered as chat in light mode, with highlighted code, folded tool calls and the picker card"
+							loading="lazy"
+						/>
+						<img
+							class="shot-dark"
+							src="/media/conversation-dark.png"
+							alt="A conversation rendered as chat in dark mode, with highlighted code, folded tool calls and the picker card"
+							loading="lazy"
+						/>
+						<figcaption>
+							<strong>A conversation</strong>
+							<span>Prose first, code highlighted, tools folded away.</span>
+						</figcaption>
+					</figure>
+
+					<figure class="shot-card">
+						<img
+							class="shot-light"
+							src="/media/terminal-light.png"
+							alt="Terminal mode in light mode, showing the pane as the machine draws it with the key strip below"
+							loading="lazy"
+						/>
+						<img
+							class="shot-dark"
+							src="/media/terminal-dark.png"
+							alt="Terminal mode in dark mode, showing the pane as the machine draws it with the key strip below"
+							loading="lazy"
+						/>
+						<figcaption>
+							<strong>Terminal mode</strong>
+							<span>The pane and split strip as the machine draws them.</span>
+						</figcaption>
+					</figure>
+
+					<figure class="shot-card">
+						<img
+							class="shot-light"
+							src="/media/drawer-light.png"
+							alt="The session panel in light mode, listing machines, workspaces, nested worktrees and agents"
+							loading="lazy"
+						/>
+						<img
+							class="shot-dark"
+							src="/media/drawer-dark.png"
+							alt="The session panel in dark mode, listing machines, workspaces, nested worktrees and agents"
+							loading="lazy"
+						/>
+						<figcaption>
+							<strong>The panel</strong>
+							<span>Machines, workspaces, nested worktrees, and PR checks.</span>
+						</figcaption>
+					</figure>
+
+					<figure class="shot-card">
+						<img
+							class="shot-light"
+							src="/media/files-light.png"
+							alt="The file browser in light mode, previewing rendered Markdown"
+							loading="lazy"
+						/>
+						<img
+							class="shot-dark"
+							src="/media/files-dark.png"
+							alt="The file browser in dark mode, previewing rendered Markdown"
+							loading="lazy"
+						/>
+						<figcaption>
+							<strong>Files</strong>
+							<span>Browse and preview Markdown, images, PDFs, and HTML.</span>
+						</figcaption>
+					</figure>
+
+					<figure class="shot-card">
+						<img
+							class="shot-light"
+							src="/media/settings-light.png"
+							alt="Settings in light mode, with a live preview under each control"
+							loading="lazy"
+						/>
+						<img
+							class="shot-dark"
+							src="/media/settings-dark.png"
+							alt="Settings in dark mode, with a live preview under each control"
+							loading="lazy"
+						/>
+						<figcaption>
+							<strong>Settings</strong>
+							<span>Every control shows what it does live.</span>
+						</figcaption>
+					</figure>
+				</div>
+			</section>
+
+			<section class="section" aria-labelledby="how-heading">
+				<div class="section-header">
+					<h2 id="how-heading">How it works &amp; quickstart</h2>
+					<p>Runs locally on Bun alongside Herdr on Linux or macOS.</p>
+				</div>
+
+				<div class="two-col">
+					<div class="panel-card">
+						<h3>Architecture</h3>
+						<pre class="code-block"><code>herdr (this host) ──unix socket──┐
+                                 ├─&gt; bordr (Bun) ──HTTPS/SSE──&gt; phone
+herdr (named machines) ──ssh -L──┘</code></pre>
+						<ul class="arch-list">
+							<li>
+								<strong>Read:</strong> Each harness's own session transcript straight off disk, with
+								a cleaned terminal fallback.
+							</li>
+							<li>
+								<strong>Write:</strong> Through Herdr's socket API (<code>agent.prompt</code>,
+								<code>agent.send_keys</code>, <code>pane.send_text</code>).
+							</li>
+							<li>
+								<strong>Live &amp; Push:</strong> One Herdr event stream fanned out over SSE, plus
+								Web Push when any agent turns <code>blocked</code>.
+							</li>
+						</ul>
+					</div>
+
+					<div class="panel-card">
+						<h3>Install from GitHub</h3>
+						<pre class="code-block"><code>git clone https://github.com/AnnasCookies/bordr.git
+cd bordr
+bun run setup</code></pre>
+						<p class="setup-note">
+							<code>bun run setup</code> checks Bun, Herdr, and Tailscale, generates VAPID keys in
+							<code>.env</code>, builds the production server, and prints the exact
+							<code>tailscale serve</code> command for your tailnet.
+						</p>
+						<div class="cta-row cta-row-flush">
+							<a class="btn btn-primary" href="https://github.com/AnnasCookies/bordr#quickstart"
+								>Full installation guide</a
+							>
+							<a class="btn" href="https://github.com/AnnasCookies/bordr">GitHub repository</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="shell footer-inner">
+				<div><strong>bordr for Herdr</strong> · MIT Licence · Waggy Tail, Happy Dev :)</div>
+				<div class="footer-links">
+					<a href="https://github.com/AnnasCookies/bordr">GitHub</a>
+					<a href="https://github.com/AnnasCookies/bordr/releases/tag/v1.1.1">Release v1.1.1</a>
+					<a href="https://github.com/AnnasCookies/bordr/blob/main/SECURITY.md">Security Policy</a>
+					<a href="https://herdr.dev">Herdr</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
