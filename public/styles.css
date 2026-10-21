@@ -409,7 +409,7 @@ code {
 	display: block;
 	width: 100%;
 	height: auto;
-	aspect-ratio: 604 / 1200;
+	aspect-ratio: 402 / 800;
 	border-radius: 20px;
 	background: var(--page);
 }
