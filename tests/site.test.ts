@@ -11,7 +11,7 @@ const headersTxt = readFileSync(join(publicDir, '_headers'), 'utf8');
 describe('bordr.dev static site', () => {
 	test('includes all launch-playbook essentials', () => {
 		expect(indexHtml).toContain('bordr for Herdr');
-		expect(indexHtml).toContain('src="/media/demo.mp4"');
+		expect(indexHtml).toContain('src="/media/demo-v2.mp4"');
 		expect(indexHtml).toContain('poster="/media/agents-light.png"');
 		expect(indexHtml).toContain('Install from GitHub');
 		expect(indexHtml).toContain('View source');
