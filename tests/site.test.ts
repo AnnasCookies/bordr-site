@@ -59,5 +59,7 @@ describe('bordr.dev static site', () => {
 		expect(headersTxt).toContain("Content-Security-Policy: default-src 'self'");
 		expect(indexHtml).not.toMatch(/\sstyle=/i);
 		expect(indexHtml).not.toMatch(/<script(?![^>]*\bsrc=)/i);
+		expect(indexHtml).not.toContain('\u2014');
+		expect(indexHtml).not.toContain('&mdash;');
 	});
 });

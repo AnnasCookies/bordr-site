@@ -4,10 +4,10 @@ Static landing page for [bordr.dev](https://bordr.dev), pointing visitors to [`A
 
 ## Structure
 
-- `public/index.html` — single-page overview with the `v1.1.1` demonstration video (`demo.mp4`), three core benefits, Tailscale/no-login security boundary callout, light/dark screenshot gallery, and quickstart commands.
-- `public/styles.css` — self-hosted `IBM Plex Sans` and `IBM Plex Mono` typography and `bordr`'s light/dark colour tokens.
-- `public/_headers` — Cloudflare Pages security (`Content-Security-Policy`, `X-Frame-Options`, `X-Content-Type-Options`) and cache headers.
-- `tests/site.test.ts` — verifies playbook requirements, asset integrity, and headers.
+- `public/index.html`: single-page overview with the `v1.1.1` demonstration video (`demo.mp4`), three core benefits, Tailscale/no-login security boundary callout, light/dark screenshot gallery, and quickstart commands.
+- `public/styles.css`: self-hosted `IBM Plex Sans` and `IBM Plex Mono` typography and `bordr`'s light/dark colour tokens.
+- `public/_headers`: Cloudflare Pages security (`Content-Security-Policy`, `X-Frame-Options`, `X-Content-Type-Options`) and cache headers.
+- `tests/site.test.ts`: verifies playbook requirements, asset integrity, and headers.
 
 ## Local development
 
