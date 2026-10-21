@@ -18,13 +18,10 @@ bun run lint
 bun test
 ```
 
-## Cloudflare Pages setup (`bordr.dev`)
+## Deployment (`bordr.dev`)
 
-Cloudflare Pages hosts static sites for free with unlimited bandwidth:
+Deployed on the latest Cloudflare Pages / Workers Static Assets platform via [`wrangler.jsonc`](wrangler.jsonc), with custom domains `bordr.dev` and `www.bordr.dev` bound directly:
 
-1. In the Cloudflare dashboard, open **Workers & Pages → Create → Pages → Connect to Git** and select `AnnasCookies/bordr-site`.
-2. Set:
-   - **Production branch:** `main`
-   - **Build command:** _(leave empty)_
-   - **Build output directory:** `public`
-3. Under **Custom domains**, attach `bordr.dev` (and `www.bordr.dev` if desired).
+```bash
+bun run deploy
+```

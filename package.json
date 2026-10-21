@@ -17,10 +17,13 @@
 		"dev": "bun --hot scripts/serve.ts",
 		"lint": "prettier --check .",
 		"format": "prettier --write .",
-		"test": "bun test"
+		"test": "bun test",
+		"deploy": "env -u CLOUDFLARE_API_TOKEN -u CF_API_TOKEN wrangler deploy",
+		"preview": "wrangler dev"
 	},
 	"devDependencies": {
 		"@types/bun": "^1.2.0",
-		"prettier": "^3.8.3"
+		"prettier": "^3.8.3",
+		"wrangler": "^4.151.3"
 	}
 }
