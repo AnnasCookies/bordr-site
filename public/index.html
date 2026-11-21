@@ -36,7 +36,7 @@
 				<a class="brand" href="/">
 					<img src="/collie.svg" alt="bordr pixel-art border collie mark" width="28" height="28" />
 					<span>bordr</span>
-					<span class="version-pill">v1.1.1</span>
+					<span class="version-pill">v1.2.0</span>
 				</a>
 				<nav class="nav-actions" aria-label="Primary">
 					<button
@@ -80,8 +80,8 @@
 						<a class="btn" href="https://github.com/AnnasCookies/bordr">View source</a>
 						<a
 							class="btn btn-amber"
-							href="https://github.com/AnnasCookies/bordr/releases/tag/v1.1.1"
-							>Release v1.1.1</a
+							href="https://github.com/AnnasCookies/bordr/releases/tag/v1.2.0"
+							>Release v1.2.0</a
 						>
 					</div>
 					<div class="harness-row" aria-label="Supported coding agent harnesses">
@@ -139,9 +139,9 @@
 						<span class="benefit-badge">2 · Chat + Terminal</span>
 						<h3>Read clean chat, or drive the real TUI</h3>
 						<p>
-							Sessions render as structured chat with VS Code syntax highlighting, folded tool
-							calls, and diffs. When a TUI needs raw keys, switch to Terminal mode for the exact
-							pane, split strip, and `/` skill autocomplete.
+							Sessions render as structured chat with VS Code syntax highlighting, a copy button on
+							every code block, folded tool calls, and diffs. When a TUI needs raw keys, switch to
+							Terminal mode for the exact pane, split strip, and `/` skill autocomplete.
 						</p>
 					</article>
 
@@ -321,7 +321,10 @@
 			<section class="section" aria-labelledby="how-heading">
 				<div class="section-header">
 					<h2 id="how-heading">How it works &amp; quickstart</h2>
-					<p>Runs locally on Bun alongside Herdr on Linux or macOS.</p>
+					<p>
+						Runs locally on Bun alongside Herdr on Linux or macOS: the Herdr TUI, or herdr-core
+						under the Herdr desktop app.
+					</p>
 				</div>
 
 				<div class="two-col">
@@ -331,6 +334,11 @@
                                  ├─&gt; bordr (Bun) ──HTTPS/SSE──&gt; phone
 herdr (named machines) ──ssh -L──┘</code></pre>
 						<ul class="arch-list">
+							<li>
+								<strong>Either Herdr:</strong> The TUI's socket, or herdr-core's (<code>hc</code>),
+								whichever is running. Machines herdr-core links are reached through it, with no SSH
+								forward of bordr's own.
+							</li>
 							<li>
 								<strong>Read:</strong> Each harness's own session transcript straight off disk, with
 								a cleaned terminal fallback.
@@ -372,7 +380,7 @@ bun run setup</code></pre>
 				<div><strong>bordr for Herdr</strong> · MIT Licence · Waggy Tail, Happy Dev :)</div>
 				<div class="footer-links">
 					<a href="https://github.com/AnnasCookies/bordr">GitHub</a>
-					<a href="https://github.com/AnnasCookies/bordr/releases/tag/v1.1.1">Release v1.1.1</a>
+					<a href="https://github.com/AnnasCookies/bordr/releases/tag/v1.2.0">Release v1.2.0</a>
 					<a href="https://github.com/AnnasCookies/bordr/blob/main/SECURITY.md">Security Policy</a>
 					<a href="https://herdr.dev">Herdr</a>
 				</div>

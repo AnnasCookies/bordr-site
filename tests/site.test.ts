@@ -7,6 +7,9 @@ const publicDir = join(rootDir, 'public');
 const indexHtml = readFileSync(join(publicDir, 'index.html'), 'utf8');
 const stylesCss = readFileSync(join(publicDir, 'styles.css'), 'utf8');
 const headersTxt = readFileSync(join(publicDir, '_headers'), 'utf8');
+const { version } = JSON.parse(readFileSync(join(rootDir, 'package.json'), 'utf8')) as {
+	version: string;
+};
 
 describe('bordr.dev static site', () => {
 	test('includes all launch-playbook essentials', () => {
@@ -16,6 +19,16 @@ describe('bordr.dev static site', () => {
 		expect(indexHtml).toContain('Install from GitHub');
 		expect(indexHtml).toContain('View source');
 		expect(indexHtml).toContain('https://github.com/AnnasCookies/bordr');
+	});
+
+	// The pill said v1.1.1 for two releases after it. One version, stated once in
+	// package.json, and every mention on the page has to match it.
+	test('names one bordr release everywhere it names a release', () => {
+		const mentions = Array.from(indexHtml.matchAll(/v\d+\.\d+\.\d+/g), (match) => match[0]);
+		expect(mentions.length).toBe(5);
+		expect(new Set(mentions)).toEqual(new Set([`v${version}`]));
+		expect(indexHtml).toContain(`<span class="version-pill">v${version}</span>`);
+		expect(indexHtml).toContain(`https://github.com/AnnasCookies/bordr/releases/tag/v${version}`);
 	});
 
 	test('includes the no-login and Tailscale security warning before quickstart', () => {
